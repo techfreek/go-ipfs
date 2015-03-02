@@ -203,7 +203,7 @@ test_launch_ipfs_daemon() {
 	'
 
 	test_expect_success "'ipfs daemon' output includes Gateway address" '
-		test_run_repeat_60_sec "grep \"Gateway server listening on $ADDR_GWAY\" actual_daemon" ||
+		test_run_repeat_60_sec "grep \"server listening on $ADDR_GWAY\" actual_daemon" ||
 		test_fsh cat daemon_err
 	'
 }
